@@ -8,7 +8,11 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Собираем ПК</title>
-    <script src="./js/script.js" defer></script>
+    <script src="./js/accordeon.js" defer></script>
+    <script src="./js/modal.js" defer></script>
+    <script src="./js/smoothScroll.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/seamless-scroll-polyfill@latest/lib/bundle.min.js"></script>
+    <!--сюда defer не ставим, тк интерпретатр  считает и сразу запустит данный скрипт, даннй скрипт нужен чтобы скролл был кроссбраузерным-->
     <!--с атрибутом(он оптимизирует скорость загрузки)  defer интерпретатор  ставит на скачивание скрипт и когда браузер октрывает index.html, он при этом одновременно считывает верстку(и записывает ее в глоб объект document), как тлько доскачается верстка, он запускает скрипт-->
     <!--с атрбиьутом async  интерпретатор  ставит на скачивание скрипт, продолжает считывать верстку, как только скрипт скачается, он тут же его запускает, не дожидаясь окончания считывания верстки, такой подход подходит для метрки, гугл карт-->
 </head>
@@ -21,9 +25,11 @@
             </a>
             <div class="header__menu">
                 <nav class="header__nav block-center-horis">
-                    <a href="#">Чем занимаемся</a>
-                    <a href="#">Процесс работы</a>
-                    <a href="#">Команда</a>
+                    <a href="#work">Чем занимаемся</a>
+                    <!--чтобы  при нажати на эту ссылку скролили к разделу c id=work-->
+                    <a href="#process">Процесс работы</a>
+                    <!--чтобы  при нажати на эту ссылку скролили к разделу c id=process-->
+                    <a href="#command">Команда</a>
                 </nav>
                 <button class="button header__button">Зайти в кабинет</button>
             </div>
@@ -97,7 +103,8 @@
         </div>
 
 
-        <section class="work">
+        <section class="work" id="work">
+            <!--id="work" чтоб при нажатии на элемет меню скроллили к этому разделу-->
             <div class="container">
                 <div class="work__wrap">
                     <div class="work__img">
@@ -116,7 +123,8 @@
         </section>
 
 
-        <section class="process">
+        <section class="process" id="process">
+            <!--id="process чтоб при нажатии на элеметменю скроллили к этому разделу-->
             <div class="container">
                 <div class="process__wrap">
                     <div class="process__title block-center-horis">
@@ -220,7 +228,7 @@
         </section>
 
 
-        <section class="command">
+        <section class="command" id="command">
             <div class="container">
                 <div class="process__title command__title">
                     <div class="process__img command__img-title">
