@@ -12,6 +12,7 @@
     <script src="./js/modal.js" defer></script>
     <script src="./js/smoothScroll.js" defer></script>
     <script src="./js/timer.js" defer></script>
+    <script src="./js/sendForm.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/seamless-scroll-polyfill@latest/lib/bundle.min.js"></script>
     <!--сюда defer не ставим, тк интерпретатр  считает и сразу запустит данный скрипт, даннй скрипт нужен чтобы скролл был кроссбраузерным-->
     <!--с атрибутом(он оптимизирует скорость загрузки)  defer интерпретатор  ставит на скачивание скрипт и когда браузер октрывает index.html, он при этом одновременно считывает верстку(и записывает ее в глоб объект document), как тлько доскачается верстка, он запускает скрипт-->
@@ -312,7 +313,8 @@
                     <input type="email" class="modal__input">
                 </div>
 
-                <button type="button" class="button modal__button">Отправить</button>
+                <button type="submit" class="button modal__button">Отправить</button>
+                <!--type="submit"  тк понажатию на эту кнопку произойде оптавка данных формы-->
             </div>
         </div>
     </form>
